@@ -41,17 +41,11 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/webshot", (req,res) => {
-  // res.header("Access-Control-Allow-Origin", "*");
-  // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  
-  
 
-
-  
   
   function createShot() {
     var width = req.query.width;
-    console.log(width)
+    
      var options = {
        windowSize:{
          width:width
@@ -60,55 +54,25 @@ app.get("/webshot", (req,res) => {
         width: 'window', 
         height: 'all'
         },
-       quality: 10,
+       quality: 100,
     };
-    var renderStream = webshot(req.query.url, options);
-
-    // webshot(req.query.url, `public/screenshots/${imagename}.png`, options, function(err){
-    //     // res.json({"image":`https://screenshot-api.glitch.me/screenshots/${imagename}.png`});
-    // });
     
-     // Sending a Base64 version 
- var chunks = [];
-  renderStream.on('data', function(chunk) {
-      chunks.push(chunk);
-      console.log('chunk:', chunk.length);
+     var renderStream = webshot(req.query.url, options);
+    
+  // Sending a Base64 version 
+     var chunks = [];
+      renderStream.on('data', function(chunk) {
+        chunks.push(chunk);
+        console.log('chunk:', chunk.length);
       });
-  renderStream.on('end', function() {
+      renderStream.on('end', function() {
          var result = Buffer.concat(chunks);
-         // console.log('final result:', result.length);
          var base64 = 'data:image/jpg;base64,'+result.toString('base64');
-         // console.log(result.toString('base64'));   
           res.json({"image":base64});
-      });
-    
-    
+      });  
   }
   
-  // var imagename = req.query.imagename
-  // const path = 'public/screenshots/'+imagename+'.png'
-  
   createShot();
-  // if (fs.existsSync(path)) {
-  //   fs.stat(path, function(err, stats){
-  //     let modified = stats.mtime
-  //     let seconds = (new Date().getTime() - modified) / 1000;
-  //     let minutes = seconds/60
-  //     let hours = minutes/60
-  //     let days = hours/24
-  //     console.log(`File modified ${minutes} minutes ago`);
-  //     if (days < 1){
-  //       res.json({"image":`https://screenshot-api.glitch.me/screenshots/${imagename}.png`,"created":modified});
-  //     }else{
-  //       createShot()
-  //     }  
-  //   });
-  // }else{
-  // createShot()
-  // }
-
-
-  
 });
 
 
