@@ -1,29 +1,37 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-Welcome to the Glitch BETA
+Node Webshot to Base64 API
 ==========================
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+This simple API uses [Node-Webshot](https://github.com/brenden/node-webshot) to take a screenshot of a given URL and then converts it into a Base64 Data URI. Created for [VR-Browser](https://github.com/yeemachine/vr-browser).
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+**Options**
 
-Find out more [about Glitch](https://glitch.com/about).
+This simplified version takes 2 queries: a URL and a screen width (optional).
 
+Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
 
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
-
-\ ゜o゜)ノ
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+      <th>url</th>
+      <td>
+'google.com'
+      </td>
+      <td>The website URL. No need for headers. Takes a string.</td>
+    </tr>
+    <tr>
+      <th>width</th>
+      <td>
+1000
+      </td>
+      <td>The dimension of the browser window width. Takes a value.</td>
+    </tr>
+  
+  </tbody>
+</table>
