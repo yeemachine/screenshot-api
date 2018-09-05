@@ -5,7 +5,9 @@ This simple API uses [Node-Webshot](https://github.com/brenden/node-webshot) to 
 
 **Options**
 
-This version takes only 2 arguments: a URL and a screen width (optional).
+This version takes only 2 queries: a URL and a screen width (optional).
+
+Live version at [screenshot-api.herokuapp.com/webshot](https://screenshot-api.herokuapp.com/webshot).
 
 <table>
   <thead>
@@ -21,14 +23,14 @@ This version takes only 2 arguments: a URL and a screen width (optional).
       <td>
 <pre>{ url: 'google.com'}</pre>
       </td>
-      <td>The website URL for screenshotting. No need for headers.</td>
+      <td>The website URL for screenshotting. No need for headers. Takes a string.</td>
     </tr>
     <tr>
       <th>width</th>
       <td>
 <pre>{ width: 1000}</pre>
       </td>
-      <td>The dimensions of the browser window.</td>
+      <td>The dimensions of the browser window. Takes a value.</td>
     </tr>
   
   </tbody>
