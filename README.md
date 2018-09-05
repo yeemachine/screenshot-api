@@ -20,14 +20,14 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
    <tr>
       <th>url</th>
       <td>
-url: 'google.com'
+'google.com'
       </td>
-      <td>The website URL for screenshotting. No need for headers. Takes a string.</td>
+      <td>The website URL. No need for headers. Takes a string.</td>
     </tr>
     <tr>
       <th>width</th>
       <td>
-width: 1000
+1000
       </td>
       <td>The dimensions of the browser window. Takes a value.</td>
     </tr>
