@@ -1,6 +1,3 @@
-// server.js
-// where your node app starts
-
 // init project
 const http = require('http');
 const express = require('express')
@@ -11,12 +8,6 @@ const fs = require('fs');
 const app = express()
 
 
-
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`. hi
-
-// http://expressjs.com/en/starter/static-files.html
-
 app.all('/*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -24,9 +15,6 @@ app.all('/*', function(req, res, next) {
 });
 app.use(cors())
 app.use(express.static('public'))
-
-
-// http://expressjs.com/en/starter/basic-routing.html
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -35,7 +23,7 @@ app.use(function(req, res, next) {
 
 
 app.get("/", (req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
  next();
 });
