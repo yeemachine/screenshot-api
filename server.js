@@ -50,6 +50,7 @@ app.get("/webshot", (req,res) => {
   
   
   function createShot() {
+    var width = req.query.width;
     console.log(width)
      var options = {
        windowSize:{
@@ -84,7 +85,6 @@ app.get("/webshot", (req,res) => {
     
   }
   
-  var width = req.query.width;
   // var imagename = req.query.imagename
   // const path = 'public/screenshots/'+imagename+'.png'
   
