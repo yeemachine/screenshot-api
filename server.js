@@ -63,9 +63,9 @@ app.get("/webshot", (req,res) => {
     };
     var renderStream = webshot(req.query.url, options);
 
-    webshot(req.query.url, `public/screenshots/${imagename}.png`, options, function(err){
-        // res.json({"image":`https://screenshot-api.glitch.me/screenshots/${imagename}.png`});
-    });
+    // webshot(req.query.url, `public/screenshots/${imagename}.png`, options, function(err){
+    //     // res.json({"image":`https://screenshot-api.glitch.me/screenshots/${imagename}.png`});
+    // });
     
      // Sending a Base64 version 
  var chunks = [];
@@ -85,8 +85,8 @@ app.get("/webshot", (req,res) => {
   }
   
   var width = req.query.width;
-  var imagename = req.query.imagename
-  const path = 'public/screenshots/'+imagename+'.png'
+  // var imagename = req.query.imagename
+  // const path = 'public/screenshots/'+imagename+'.png'
   
   createShot();
   // if (fs.existsSync(path)) {
