@@ -40,7 +40,7 @@ app.get("/", (req, res, next) => {
  next();
 });
 
-app.get("/display", (req,res) => {
+app.get("/webshot", (req,res) => {
   // res.header("Access-Control-Allow-Origin", "*");
   // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
