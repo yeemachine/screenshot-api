@@ -43,8 +43,9 @@ app.get("/", (req, res, next) => {
 app.get("/webshot", (req,res) => {
 
   
-  function createShot() {
-    var width = req.query.width;
+  function createShot(url, width) {
+    url = typeof url !== 'undefined' ? url : 'google.com';
+    width = typeof width !== 'undefined' ? width : 1000;
     
      var options = {
        windowSize:{
@@ -72,10 +73,8 @@ app.get("/webshot", (req,res) => {
       });  
   }
   
-  createShot();
+  createShot(req.query.url,req.query.width);
 });
-
-
 
 
 // listen for requests :)
