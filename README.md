@@ -5,7 +5,7 @@ This simple API uses [Node-Webshot](https://github.com/brenden/node-webshot) to 
 
 **Options**
 
-This version takes only 2 queries: a URL and a screen width (optional).
+This simplified version takes 2 queries: a URL and a screen width (optional).
 
 Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
 
@@ -30,7 +30,7 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
       <td>
 1000
       </td>
-      <td>The dimensions of the browser window. Takes a value.</td>
+      <td>The dimension of the browser window width. Takes a value.</td>
     </tr>
   
   </tbody>
