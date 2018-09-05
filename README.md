@@ -7,7 +7,7 @@ This simple API uses [Node-Webshot](https://github.com/brenden/node-webshot) to 
 
 This version takes only 2 queries: a URL and a screen width (optional).
 
-Live version at [screenshot-api.herokuapp.com/webshot](https://screenshot-api.herokuapp.com/webshot).
+Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
 
 <table>
   <thead>
