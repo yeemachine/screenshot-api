@@ -16,9 +16,7 @@
   "engines": {
     "node": "9.x"
   },
-  "repository": {
-    "url": "https://github.com/yeemachine/screenshotapi"
-  },
+  "repository": "https://github.com/yeemachine/screenshotapi",
   "license": "MIT",
   "keywords": [
     "node",
