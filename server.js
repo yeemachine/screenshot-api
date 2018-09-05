@@ -13,7 +13,7 @@ const app = express()
 
 
 // we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
+// but feel free to use whatever libs or frameworks you'd like through `package.json`. hi
 
 // http://expressjs.com/en/starter/static-files.html
 
@@ -40,7 +40,7 @@ app.get("/", (req, res, next) => {
  next();
 });
 
-app.get("/display", (req,res) => {
+app.get("/webshot", (req,res) => {
   // res.header("Access-Control-Allow-Origin", "*");
   // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
@@ -87,23 +87,25 @@ app.get("/display", (req,res) => {
   var width = req.query.width;
   var imagename = req.query.imagename
   const path = 'public/screenshots/'+imagename+'.png'
-  if (fs.existsSync(path)) {
-    fs.stat(path, function(err, stats){
-      let modified = stats.mtime
-      let seconds = (new Date().getTime() - modified) / 1000;
-      let minutes = seconds/60
-      let hours = minutes/60
-      let days = hours/24
-      console.log(`File modified ${minutes} minutes ago`);
-      if (days < 1){
-        res.json({"image":`https://screenshot-api.glitch.me/screenshots/${imagename}.png`,"created":modified});
-      }else{
-        createShot()
-      }  
-    });
-  }else{
-  createShot()
-  }
+  
+  createShot();
+  // if (fs.existsSync(path)) {
+  //   fs.stat(path, function(err, stats){
+  //     let modified = stats.mtime
+  //     let seconds = (new Date().getTime() - modified) / 1000;
+  //     let minutes = seconds/60
+  //     let hours = minutes/60
+  //     let days = hours/24
+  //     console.log(`File modified ${minutes} minutes ago`);
+  //     if (days < 1){
+  //       res.json({"image":`https://screenshot-api.glitch.me/screenshots/${imagename}.png`,"created":modified});
+  //     }else{
+  //       createShot()
+  //     }  
+  //   });
+  // }else{
+  // createShot()
+  // }
 
 
   
