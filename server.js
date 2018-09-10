@@ -20,11 +20,12 @@ app.get("/", (req, res, next) => {
 
 app.get("/webshot", (req,res) => {
   
-  var reqURL = req.query.url; 
+  var reqURL = 'http://'+decodeURIComponent(req.query.url); 
+  console.log(reqURL)
   var reqWidth = req.query.width; 
   var reqGoogle = "https://www.google.com/search?q="+reqURL
   
-  urlExists('http://'+reqURL, function(err, exists) {
+  urlExists('https://'+reqURL, function(err, exists) {
     console.log(exists); // true 
     if (exists === true){ 
     createShot(reqURL,reqWidth);
@@ -33,6 +34,7 @@ app.get("/webshot", (req,res) => {
     createShot(reqGoogle,reqWidth);    
     }
   });
+  
   
   function createShot(url, width) {
     url = typeof url !== 'undefined' ? url : 'google.com';
