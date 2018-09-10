@@ -14,7 +14,7 @@
     "webshot": "^0.18.0",
     "cors": "^2.8.4",
     "rimraf": "^2.6.2",
-    "valid-url": "^1.0.9"
+    "url-exists": "^1.0.3"
   },
   "engines": {
     "node": "9.x"

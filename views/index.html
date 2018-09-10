@@ -8,7 +8,7 @@
 <!-- hbs(handlebars): http://handlebarsjs.com/ -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Welcome to Glitch!</title>
     <meta name="description" content="A cool thing made with Glitch">
@@ -16,7 +16,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
   </head>
   <body>
     <header>
@@ -27,28 +32,27 @@
 
     <main>
       <p class="bold">Oh hi,</p>
+      
       <p>Tell me your hopes and dreams:</p>
+      
       <form>
-        <input type="text" maxlength="100" placeholder="Dreams!">
-        <button type="submit">Submit</button>
+        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
+        <button type="submit" id="submit-dream">Submit Dream</button>
       </form>
+      
       <section class="dreams">
-        <ul id="dreams">
-        </ul>
+        <ul id="dreams"></ul>
       </section>
     </main>
 
     <footer>
-      <a href="https://glitch.com">
-        Remix this in Glitch
-      </a>
+      Made with <a href="https://glitch.com">Glitch</a>!
     </footer>
 
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
 
   </body>
 </html>
