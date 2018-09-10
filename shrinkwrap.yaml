@@ -3,7 +3,7 @@ dependencies:
   express: 4.16.3
   phantom: 6.0.3
   rimraf: 2.6.2
-  valid-url: 1.0.9
+  url-exists: 1.0.3
   webshot: 0.18.0
 packages:
   /accepts/1.3.5:
@@ -592,6 +592,7 @@ packages:
       graceful-fs: 4.1.11
     resolution:
       integrity: sha1-NzaitCi4e72gzIO1P6PWM6NcKug=
+      tarball: 'http://registry.npmjs.org/jsonfile/-/jsonfile-2.4.0.tgz'
   /jsprim/1.4.1:
     dependencies:
       assert-plus: 1.0.0
@@ -785,7 +786,7 @@ packages:
     dependencies:
       phantomjs-prebuilt: 2.1.16
       split: 1.0.1
-      winston: 3.0.0
+      winston: 3.1.0
     dev: false
     engines:
       node: '>=8'
@@ -1089,6 +1090,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
+  /url-exists/1.0.3:
+    dependencies:
+      request: 2.88.0
+    dev: false
+    resolution:
+      integrity: sha1-BbKHW68ElQ4n71HphG8e/wRxaJM=
   /util-deprecate/1.0.2:
     dev: false
     resolution:
@@ -1104,10 +1111,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
-  /valid-url/1.0.9:
-    dev: false
-    resolution:
-      integrity: sha1-HBRHm0DxOXp1eC8RXkCGRHQzogA=
   /vary/1.1.2:
     dev: false
     engines:
@@ -1150,7 +1153,7 @@ packages:
       node: '>= 6.4.0'
     resolution:
       integrity: sha512-0R1bvFqxSlK/ZKTH86nymOuKv/cT1PQBMuDdA7k7f0S9fM44dNH6bXnuxwXPrN8lefJgtZq08BKdyZ0DZIy/rg==
-  /winston/3.0.0:
+  /winston/3.1.0:
     dependencies:
       async: 2.6.1
       diagnostics: 1.1.1
@@ -1165,7 +1168,7 @@ packages:
     engines:
       node: '>= 6.4.0'
     resolution:
-      integrity: sha512-7QyfOo1PM5zGL6qma6NIeQQMh71FBg/8fhkSAePqtf5YEi6t+UrPDcUuHhuuUasgso49ccvMEsmqr0GBG2qaMQ==
+      integrity: sha512-FsQfEE+8YIEeuZEYhHDk5cILo1HOcWkGwvoidLrDgPog0r4bser1lEIOco2dN9zpDJ1M88hfDgZvxe5z4xNcwg==
   /wrappy/1.0.2:
     dev: false
     resolution:
@@ -1184,5 +1187,5 @@ specifiers:
   express: ^4.16.3
   phantom: ^6.0.3
   rimraf: ^2.6.2
-  valid-url: ^1.0.9
+  url-exists: ^1.0.3
   webshot: ^0.18.0

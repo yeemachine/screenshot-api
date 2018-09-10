@@ -23,7 +23,7 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
       <td>
 'google.com'
       </td>
-      <td>The website URL. No need for headers. Takes a string.</td>
+      <td>The website URL. No need for headers. Takes a string. If given an invalid URL, it will return a screenshot of a Google search of the string.</td>
     </tr>
     <tr>
       <th>width</th>
