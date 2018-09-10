@@ -20,7 +20,7 @@ app.get("/", (req, res, next) => {
 
 app.get("/webshot", (req,res) => {
   
-  var reqURL = 'http://'+decodeURIComponent(req.query.url); 
+  var reqURL = 'https://'+decodeURIComponent(req.query.url); 
   console.log(reqURL)
   var reqWidth = req.query.width; 
   var reqGoogle = "https://www.google.com/search?q="+reqURL
