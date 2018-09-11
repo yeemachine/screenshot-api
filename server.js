@@ -7,6 +7,8 @@ const cors = require('cors')
 const fs = require('fs');
 const app = express()
 const urlExists = require('url-exists');
+const Vibrant = require('node-vibrant');
+const sizeOf = require('image-size');
 
 
 app.use(cors())
@@ -60,9 +62,17 @@ app.get("/webshot", (req,res) => {
         console.log('chunk:', chunk.length);
       });
       renderStream.on('end', function() {
-         var result = Buffer.concat(chunks);
-         var base64 = 'data:image/jpg;base64,'+result.toString('base64');
-          res.json({"image":base64});
+        var result = Buffer.concat(chunks);
+        var base64 = 'data:image/jpg;base64,'+result.toString('base64');
+        var dimensions = sizeOf(result);
+        var opts = {
+        'colorCount':1
+        }        
+        let v = new Vibrant(result)
+        // Promise
+        v.getPalette().then((palette) => res.json({"image":base64,"rgb":palette,"dimensions":dimensions}))
+         
+        
       });  
   }
   
