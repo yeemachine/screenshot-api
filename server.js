@@ -72,7 +72,6 @@ app.get("/webshot", (req,res) => {
         // Promise
         v.getPalette().then((palette) => res.json({"image":base64,"rgb":palette,"dimensions":dimensions}))
          
-        
       });  
   }
   
