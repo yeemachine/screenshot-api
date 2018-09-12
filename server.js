@@ -25,7 +25,7 @@ app.get("/webshot", (req,res) => {
   var reqURL = 'https://'+decodeURIComponent(req.query.url); 
   console.log(reqURL)
   var reqWidth = req.query.width; 
-  var reqGoogle = "https://www.google.com/search?q="+reqURL
+  var reqGoogle = "https://www.google.com/search?tbm=isch&q="+reqURL
   
   urlExists(reqURL, function(err, exists) {
     console.log(exists); // true 
