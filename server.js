@@ -70,7 +70,7 @@ app.get("/webshot", (req,res) => {
         }        
         let v = new Vibrant(result)
         // Promise
-        v.getPalette().then((palette) => res.json({"image":base64,"rgb":palette,"dimensions":dimensions}))
+        v.getPalette().then((palette) => res.json({"image":base64,"color":palette,"dimensions":dimensions}))
          
       });  
   }
