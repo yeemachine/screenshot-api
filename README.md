@@ -44,6 +44,8 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
       <th>Description</th>
     </tr>
   </thead>
+  
+  
   <tbody>
    <tr>
       <th>image</th>
@@ -52,6 +54,7 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
       </td>
       <td>Returns a Base64 image.</td>
     </tr>
+    
     <tr>
     
       <th>dimensions</th>
@@ -60,7 +63,7 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
 </td>
       <td>Returns the dimensions and file type of the screenshot.</td>
     </tr>
-    
+    <tr>
     <th>color</th>
       <td>
 'DarkMuted: {_rgb: Array(3), _population: 1, _hsl: Array(3)}
@@ -70,7 +73,7 @@ LightVibrant: {_rgb: Array(3), _population: 15, _hsl: Array(3)}
 Muted: {_rgb: Array(3), _population: 59, _hsl: Array(3)}
 Vibrant: {_rgb: Array(3), _population: 27, _hsl: Array(3)}'
 </td>
-      <td>Returns the dimensions and file type of the screenshot.</td>
+<td>Returns the dimensions and file type of the screenshot.</td>
     </tr>
   
   </tbody>
