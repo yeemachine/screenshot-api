@@ -40,8 +40,8 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
 <table>
   <thead>
     <tr>
-      <th>Option</th>
-      <th>Default Value</th>
+      <th>Response</th>
+      <th>Value</th>
       <th>Description</th>
     </tr>
   </thead>
