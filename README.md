@@ -37,32 +37,24 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
   </tbody>
 </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Response</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-   <tr>
-      <th>url</th>
-      <td>
-'google.com'
-      </td>
-      <td>The website URL. No need for headers. Takes a string. If given an invalid URL, it will return a screenshot of a Google image search of the string.</td>
-    </tr>
-    <tr>
-      <th>width</th>
-      <td>
-1000
-      </td>
-      <td>The dimension of the browser window width. Takes a value.</td>
-    </tr>
-  
-  </tbody>
-</table>
+**Example Output**
+
+```
+color:{
+  DarkMuted: {_rgb: Array(3), _population: 1, _hsl: Array(3)}
+  DarkVibrant: {_rgb: Array(3), _population: 0}
+  LightMuted: {_rgb: Array(3), _population: 89, _hsl: Array(3)}
+  LightVibrant: {_rgb: Array(3), _population: 15, _hsl: Array(3)}
+  Muted: {_rgb: Array(3), _population: 59, _hsl: Array(3)}
+  Vibrant: {_rgb: Array(3), _population: 27, _hsl: Array(3)}
+},
+dimensions: {
+  width: 1440, 
+  height: 768, 
+  type: "png"
+},
+image: "data:image/jpg;base64"
+```
 
 
 
