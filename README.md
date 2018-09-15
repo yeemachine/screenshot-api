@@ -35,44 +35,4 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
   </tbody>
 </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Response</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  
-  
-  <tbody>
-   <tr>
-      <th>image</th>
-      <td>
-'data:image/jpg;base64...'
-      </td>
-      <td>Returns a Base64 image.</td>
-    </tr>
-    
-    <tr>
-    
-      <th>dimensions</th>
-      <td>
-{width: 1440, height: 768, type: "png"}</td>
-      <td>Returns the dimensions and file type of the screenshot.</td>
-    </tr>
-    <tr>
-    <th>color</th>
-      <td>
-'DarkMuted: {_rgb: Array(3), _population: 1, _hsl: Array(3)}
-DarkVibrant: {_rgb: Array(3), _population: 0}
-LightMuted: {_rgb: Array(3), _population: 89, _hsl: Array(3)}
-LightVibrant: {_rgb: Array(3), _population: 15, _hsl: Array(3)}
-Muted: {_rgb: Array(3), _population: 59, _hsl: Array(3)}
-Vibrant: {_rgb: Array(3), _population: 27, _hsl: Array(3)}'
-</td>
-<td>Returns the dimensions and file type of the screenshot.</td>
-    </tr>
-  
-  </tbody>
-</table>
+
