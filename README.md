@@ -25,11 +25,10 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
       </td>
       <td>The website URL. No need for headers. Takes a string. If given an invalid URL, it will return a screenshot of a Google image search of the string.</td>
     </tr>
+    
     <tr>
       <th>width</th>
-      <td>
-1000
-      </td>
+      <td>1000</td>
       <td>The dimension of the browser window width. Takes a value.</td>
     </tr>
   
@@ -59,8 +58,7 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
     
       <th>dimensions</th>
       <td>
-'{width: 1440, height: 768, type: "png"}'
-</td>
+{width: 1440, height: 768, type: "png"}</td>
       <td>Returns the dimensions and file type of the screenshot.</td>
     </tr>
     <tr>
