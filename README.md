@@ -28,7 +28,9 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
     
     <tr>
       <th>width</th>
-      <td>'1000'</td>
+      <td>
+1000
+      </td>
       <td>The dimension of the browser window width. Takes a value.</td>
     </tr>
   
