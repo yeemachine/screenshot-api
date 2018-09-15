@@ -37,7 +37,7 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
   </tbody>
 </table>
 
-**Example Output**
+**Example Response**
 
 ```
 color:{
