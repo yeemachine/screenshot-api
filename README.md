@@ -37,6 +37,33 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
   </tbody>
 </table>
 
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+      <th>url</th>
+      <td>
+'google.com'
+      </td>
+      <td>The website URL. No need for headers. Takes a string. If given an invalid URL, it will return a screenshot of a Google image search of the string.</td>
+    </tr>
+    <tr>
+      <th>width</th>
+      <td>
+1000
+      </td>
+      <td>The dimension of the browser window width. Takes a value.</td>
+    </tr>
+  
+  </tbody>
+</table>
+
 
 
 
