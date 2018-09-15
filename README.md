@@ -5,7 +5,7 @@ This simple API uses [Node-Webshot](https://github.com/brenden/node-webshot) to 
 
 **Options**
 
-This simplified version takes 2 queries: a URL and a screen width (optional).
+This simplified version takes 2 parameters: a URL and a screen width (optional).
 
 Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
 
@@ -23,7 +23,7 @@ Example: https://screenshot-api.herokuapp.com/webshot?url=google.com&width=1440
       <td>
 'google.com'
       </td>
-      <td>The website URL. No need for headers. Takes a string. If given an invalid URL, it will return a screenshot of a Google search of the string.</td>
+      <td>The website URL. No need for headers. Takes a string. If given an invalid URL, it will return a screenshot of a Google image search of the string.</td>
     </tr>
     <tr>
       <th>width</th>

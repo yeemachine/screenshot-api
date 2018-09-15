@@ -7,6 +7,8 @@ const cors = require('cors')
 const fs = require('fs');
 const app = express()
 const urlExists = require('url-exists');
+const Vibrant = require('node-vibrant');
+const sizeOf = require('image-size');
 
 
 app.use(cors())
@@ -20,11 +22,12 @@ app.get("/", (req, res, next) => {
 
 app.get("/webshot", (req,res) => {
   
-  var reqURL = req.query.url; 
+  var reqURL = 'https://'+decodeURIComponent(req.query.url); 
+  console.log(reqURL)
   var reqWidth = req.query.width; 
-  var reqGoogle = "https://www.google.com/search?q="+reqURL
+  var reqGoogle = "https://www.google.com/search?tbm=isch&q="+reqURL
   
-  urlExists('http://'+reqURL, function(err, exists) {
+  urlExists(reqURL, function(err, exists) {
     console.log(exists); // true 
     if (exists === true){ 
     createShot(reqURL,reqWidth);
@@ -33,6 +36,7 @@ app.get("/webshot", (req,res) => {
     createShot(reqGoogle,reqWidth);    
     }
   });
+  
   
   function createShot(url, width) {
     url = typeof url !== 'undefined' ? url : 'google.com';
@@ -58,9 +62,16 @@ app.get("/webshot", (req,res) => {
         console.log('chunk:', chunk.length);
       });
       renderStream.on('end', function() {
-         var result = Buffer.concat(chunks);
-         var base64 = 'data:image/jpg;base64,'+result.toString('base64');
-          res.json({"image":base64});
+        var result = Buffer.concat(chunks);
+        var base64 = 'data:image/jpg;base64,'+result.toString('base64');
+        var dimensions = sizeOf(result);
+        var opts = {
+        'colorCount':1
+        }        
+        let v = new Vibrant(result)
+        // Promise
+        v.getPalette().then((palette) => res.json({"image":base64,"color":palette,"dimensions":dimensions}))
+         
       });  
   }
   

@@ -14,7 +14,9 @@
     "webshot": "^0.18.0",
     "cors": "^2.8.4",
     "rimraf": "^2.6.2",
-    "url-exists": "^1.0.3"
+    "url-exists": "^1.0.3",
+    "node-vibrant": "^3.0.0",
+    "image-size": "^0.6.3"
   },
   "engines": {
     "node": "9.x"
