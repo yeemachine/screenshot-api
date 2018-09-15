@@ -1,7 +1,7 @@
 Node Webshot to Base64 API
 ==========================
 
-This simple API uses [Node-Webshot](https://github.com/brenden/node-webshot) to take a screenshot of a given URL and then converts it into a Base64 Data URI. Created for [VR-Browser](https://github.com/yeemachine/vr-browser).
+This simple API uses [Node-Webshot](https://github.com/brenden/node-webshot) to take a screenshot of a given URL and then converts it into a Base64 Data URI. It also uses [Node-Vibrant](https://github.com/brenden/node-vibrant) to give back dominant colors. Created for [VR-Browser](https://github.com/yeemachine/vr-browser).
 
 **Options**
 
